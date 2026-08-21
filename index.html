@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Житлові квартали — демо</title>
+<meta name="description" content="Демонстраційний лендинг житлового забудовника: вільні квартири, планування, інсоляція та строки здачі. Назву замовника приховано за NDA.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F4F2ED">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232A2320'/%3E%3Cpath d='M10 22V13l6-4 6 4v9' stroke='%23F4F2ED' stroke-width='1.6' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Onest:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!--
+  DIRECTION CONTRACT — pinned by the user's own references (Dribbble shots supplied in brief)
+  THESIS: A quiet, expensive editorial surface for a residential developer. Soft
+    corners, warm paper, generous air. It refuses density: one idea per screen.
+  OWN-WORLD: Warm off-white #F4F2ED ground, white cards, espresso #2A2320 feature
+    blocks, 24–32px radii, hairline #E2DCD2 rules. Playfair Display with italic
+    accent words for voice; Inter, small and light, for everything functional.
+    Imagery lives in large rounded frames — photographs when supplied, fine-line
+    architectural drawings until then.
+  STORY: The visitor reads one confident promise, sees the quarters, finds an
+    apartment they can afford, checks where the sun falls, and books a viewing.
+  FIRST VIEWPORT: Floating pill nav; full-bleed rounded hero frame; serif headline
+    with an italic second line over it; a white search pill straddling its lower edge.
+  FORM: Editorial property landing, as pinned by the brief's references.
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->
+
+<a class="skip" href="#main">Перейти до змісту</a>
+
+<header class="nav" id="top">
+  <a class="nav__mark" href="#top" aria-label="На початок">
+      <span class="redact" role="img" aria-label="Назву забудовника приховано за угодою про нерозголошення"></span>
+      <span class="nda">NDA</span>
+    </a>
+  <nav class="nav__pill" aria-label="Розділи">
+    <a href="#pro">Про нас</a>
+    <a href="#kvartaly">Квартали</a>
+    <a href="#kvartyry">Квартири</a>
+    <a href="#sonce">Планування</a>
+  </nav>
+  <a class="nav__cta" href="#zapys">Записатись</a>
+</header>
+
+<main id="main">
+
+<!-- ═══ ГЕРОЙ ═══════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <figure class="hero__frame media" data-media="hero">
+    <figcaption class="hero__say">
+      <h1 class="display display--hero">
+        Дім, у якому<br><em>хочеться лишитись</em>
+      </h1>
+      <p class="hero__sub">
+        Три житлові квартали в Києві. Дивіться планування, інсоляцію
+        та реальні строки здачі — ще до того, як приїдете на майданчик.
+      </p>
+    </figcaption>
+    <span class="hero__note">Квартал I · здача IV кв. 2027</span>
+  </figure>
+
+  <form class="search" data-search aria-label="Підбір квартири">
+    <div class="search__f">
+      <span class="search__ic" aria-hidden="true">
+        <svg viewBox="0 0 20 20"><path d="M10 18s6-5.3 6-9.5A6 6 0 0 0 4 8.5C4 12.7 10 18 10 18Z"/><circle cx="10" cy="8.5" r="2.2"/></svg>
+      </span>
+      <label for="s-cx">Квартал</label>
+      <select id="s-cx" data-s-cx><option value="">Будь-який</option></select>
+    </div>
+    <div class="search__f">
+      <span class="search__ic" aria-hidden="true">
+        <svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="11" y="3" width="6" height="6" rx="1"/><rect x="3" y="11" width="6" height="6" rx="1"/><rect x="11" y="11" width="6" height="6" rx="1"/></svg>
+      </span>
+      <label for="s-rooms">Кімнат</label>
+      <select id="s-rooms" data-s-rooms>
+        <option value="">Будь-скільки</option>
+        <option value="1">1</option><option value="2">2</option>
+        <option value="3">3</option><option value="4">4</option>
+      </select>
+    </div>
+    <div class="search__f">
+      <span class="search__ic" aria-hidden="true">
+        <svg viewBox="0 0 20 20"><path d="M3 17V7l7-4 7 4v10"/><path d="M8 17v-5h4v5"/></svg>
+      </span>
+      <label for="s-price">Бюджет</label>
+      <select id="s-price" data-s-price>
+        <option value="">Будь-який</option>
+        <option value="4000000">до 4 млн ₴</option>
+        <option value="8000000">до 8 млн ₴</option>
+        <option value="15000000">до 15 млн ₴</option>
+        <option value="35000000">до 35 млн ₴</option>
+      </select>
+    </div>
+    <button class="search__go" type="submit">
+      Знайти
+      <svg class="arr" viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h19M15 1l4 4-4 4"/></svg>
+    </button>
+  </form>
+</section>
+
+<!-- ═══ ПРО НАС ═════════════════════════════════════════════════════════ -->
+<section class="say" id="pro">
+  <p class="eyebrow">Про нас</p>
+  <p class="display display--say">
+    Ми будуємо квартали, у яких <em>лишаються</em> —
+    з дворами без машин, живими першими поверхами
+    і <em>чесними</em> строками здачі.
+  </p>
+  <div class="figures" data-stats></div>
+</section>
+
+<!-- ═══ КОЛАЖ ═══════════════════════════════════════════════════════════ -->
+<section class="collage" aria-label="Квартали">
+  <figure class="collage__i collage__i--a media" data-media="q3"><figcaption>Квартал III · лісова зона</figcaption></figure>
+  <figure class="collage__i collage__i--b media" data-media="q2"><figcaption>Квартал II · центр</figcaption></figure>
+  <a class="collage__i collage__i--c collage__card" href="#sonce">
+    <span class="collage__k">Планування<br>та інсоляція</span>
+    <span class="round-arr" aria-hidden="true"><svg viewBox="0 0 22 22"><path d="M7 15 15 7M8 7h7v7"/></svg></span>
+  </a>
+  <figure class="collage__i collage__i--d media" data-media="q1"><figcaption>Квартал I · біля води</figcaption></figure>
+</section>
+
+<!-- ═══ КВАРТАЛИ ════════════════════════════════════════════════════════ -->
+<section class="sec" id="kvartaly">
+  <header class="sec__h">
+    <h2 class="display">Наші <em>квартали</em></h2>
+    <p class="lede">Один зданий, один в оздобленні, один у монолітних роботах.</p>
+  </header>
+  <div class="cxs" data-complexes></div>
+</section>
+
+<!-- ═══ ТЕМНИЙ БЛОК ═════════════════════════════════════════════════════ -->
+<section class="feature" id="hid">
+  <div class="feature__say">
+    <h2 class="display display--inv">Хід <em>будівництва</em></h2>
+    <p class="lede lede--inv">
+      Фотозвіт щомісяця, камери на майданчику та відсоток готовності,
+      який ми не малюємо, а рахуємо з календарного плану робіт.
+    </p>
+    <dl class="prog" data-progress></dl>
+    <a class="btn btn--light" href="#zapys">Приїхати на майданчик
+      <svg class="arr" viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h19M15 1l4 4-4 4"/></svg></a>
+  </div>
+  <figure class="feature__media media" data-media="build"></figure>
+</section>
+
+<!-- ═══ КВАРТИРИ ════════════════════════════════════════════════════════ -->
+<section class="sec" id="kvartyry">
+  <header class="sec__h sec__h--row">
+    <div>
+      <h2 class="display">Вільні <em>квартири</em></h2>
+      <p class="lede">Ціни та строки — станом на серпень 2026.</p>
+    </div>
+    <div class="chips" data-f-rooms role="group" aria-label="Кількість кімнат"></div>
+  </header>
+  <div class="units" data-units></div>
+  <button class="more" type="button" data-more>Показати ще</button>
+</section>
+
+<!-- ═══ ІНСОЛЯЦІЯ ═══════════════════════════════════════════════════════ -->
+<section class="sec" id="sonce">
+  <header class="sec__h">
+    <h2 class="display">Куди <em>світить сонце</em></h2>
+    <p class="lede">Інсоляцію рахують ще на стадії проєкту. Ми показуємо її до купівлі, а не після.</p>
+  </header>
+
+  <div class="sun">
+    <div class="sun__ctl">
+      <div class="seg" role="group" aria-label="Планування">
+        <button type="button" class="seg__b is-on" data-plan="l1">1 кімната</button>
+        <button type="button" class="seg__b" data-plan="l2">2 кімнати</button>
+        <button type="button" class="seg__b" data-plan="l3">3 кімнати</button>
+      </div>
+      <div class="seg" role="group" aria-label="Час доби">
+        <button type="button" class="seg__b" data-hour="9">Ранок</button>
+        <button type="button" class="seg__b is-on" data-hour="13">День</button>
+        <button type="button" class="seg__b" data-hour="18">Вечір</button>
+      </div>
+      <dl class="spec" data-plan-read></dl>
+    </div>
+    <figure class="sun__dwg" data-plan-dwg></figure>
+  </div>
+</section>
+
+<!-- ═══ ЕТАПИ ═══════════════════════════════════════════════════════════ -->
+<section class="sec sec--tight" id="uhoda">
+  <header class="sec__h">
+    <h2 class="display">Від перегляду <em>до ключів</em></h2>
+  </header>
+  <ol class="steps" data-deal></ol>
+</section>
+
+<!-- ═══ ПИТАННЯ ═════════════════════════════════════════════════════════ -->
+<section class="sec sec--tight" id="pytannia">
+  <header class="sec__h">
+    <h2 class="display">Часті <em>питання</em></h2>
+  </header>
+  <div class="faq" data-faq></div>
+</section>
+
+<!-- ═══ ЗАПИС ═══════════════════════════════════════════════════════════ -->
+<section class="cta" id="zapys">
+  <div class="cta__in">
+    <h2 class="display display--inv display--cta">Приїздіть<br><em>на майданчик</em></h2>
+    <p class="lede lede--inv">
+      Каску видамо. Покажемо поверх, з якого відкривається саме той вид.
+    </p>
+    <form class="form" data-form novalidate>
+      <div class="field">
+        <label for="fn">Імʼя</label>
+        <input id="fn" name="name" type="text" autocomplete="name" required placeholder="Олена">
+        <p class="err" data-err-for="fn"></p>
+      </div>
+      <div class="field">
+        <label for="fp">Телефон</label>
+        <input id="fp" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+380 __ ___ __ __">
+        <p class="err" data-err-for="fp"></p>
+      </div>
+      <button class="btn btn--light btn--lg" type="submit">Записатись
+        <svg class="arr" viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h19M15 1l4 4-4 4"/></svg></button>
+      <p class="form__ok" data-form-ok role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <div class="foot__brand">
+      <span class="redact redact--lg" role="img" aria-label="Назву забудовника приховано за угодою про нерозголошення"></span>
+      <span class="foot__sub">Забудовник · Київ</span>
+    </div>
+    <nav class="foot__col" aria-label="Обʼєкти">
+      <span class="foot__k">Обʼєкти</span>
+      <a href="#kvartaly">Квартал I</a><a href="#kvartaly">Квартал II</a><a href="#kvartaly">Квартал III</a>
+    </nav>
+    <div class="foot__col">
+      <span class="foot__k">Відділ продажів</span>
+      <a href="tel:+380440000000">+380 44 000 00 00</a>
+      <a href="mailto:sales@example.com">sales@example.com</a>
+      <span class="foot__sub">Щодня 9:00–20:00</span>
+    </div>
+    <p class="foot__nda">
+      Демонстрація можливостей студії. Назву забудовника, назви кварталів та
+      адреси приховано за угодою про нерозголошення; ціни, дати й показники —
+      умовні. Фотографії ілюстративні.
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
